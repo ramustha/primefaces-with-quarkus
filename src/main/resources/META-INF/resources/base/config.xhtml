@@ -1,0 +1,55 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui">
+
+    <div class="layout-config">
+        <div class="layout-config-content-wrapper">
+            <a id="layout-config-button" tabindex="0" class="layout-config-button">
+                <i class="pi pi-cog"></i>
+            </a>
+            <a id="layout-config-close-button" tabindex="0" class="layout-config-close">
+                <i class="pi pi-times"></i>
+            </a>
+
+            <div class="layout-config-content">
+                <h:form>
+                    <h4>Input Style</h4>
+                    <p:selectOneRadio value="#{app.inputStyle}" onchange="App.updateInputStyle(event.target.value)">
+                        <f:selectItem itemLabel="Outlined" itemValue="outlined"/>
+                        <f:selectItem itemLabel="Filled" itemValue="filled"/>
+                        <p:ajax/>
+                    </p:selectOneRadio>
+
+                    <h4>Themes</h4>
+                    <div class="p-grid free-themes">
+                        <div class="p-col-3">
+                            <p:commandLink actionListener="#{app.changeTheme('saga', false)}"
+                                           oncomplete="App.changeTheme('saga')">
+                                <p:graphicImage name="images/themes/saga.png" alt="Saga"/>
+                            </p:commandLink>
+                            <span>Saga</span>
+                        </div>
+                        <div class="p-col-3">
+                            <p:commandLink actionListener="#{app.changeTheme('vela', true)}"
+                                           oncomplete="App.changeTheme('vela', true)">
+                                <p:graphicImage name="images/themes/vela.png" alt="Vela"/>
+                            </p:commandLink>
+                            <span>Vela</span>
+                        </div>
+                        <div class="p-col-3">
+                            <p:commandLink actionListener="#{app.changeTheme('arya', true)}"
+                                           oncomplete="App.changeTheme('arya', true)">
+                                <p:graphicImage name="images/themes/arya.png" alt="Arya"/>
+                            </p:commandLink>
+                            <span>Arya</span>
+                        </div>
+                        <div class="p-col-3"></div>
+                    </div>
+
+                </h:form>
+            </div>
+        </div>
+    </div>
+</ui:composition>

@@ -1,0 +1,111 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                template="base/template.xhtml">
+
+    <ui:define name="content">
+        <div class="home">
+            <div id="homepage-intro" class="introduction #{app.darkMode ? 'introduction-dark' : ''}">
+                <div class="introduction-promo">Always bet on Prime!</div>
+                <div class="introduction-title">The Ultimate UI Component Library</div>
+                <div class="introduction-subtitle">for JSF</div>
+
+                <h:link styleClass="action-button" outcome="/getstarted">GET STARTED</h:link>
+                <p:graphicImage alt="devices" styleClass="introduction-devices" name="images/home/intro-devices.png"  />
+            </div>
+
+            <div class="features">
+                <h4>Features</h4>
+                <p>Congratulations! <span role="img" aria-label="celebrate" class="p-mx-2">🎉</span> Your quest to find the UI library for JavaServer Faces is now complete.</p>
+
+                <div class="p-grid">
+                    <div class="p-col-12 p-md-4">
+                        <div class="feature-card">
+                            <p:graphicImage name="images/home/jsf-components.png"  />
+                            <div class="feature-card-detail">
+                                <div class="feature-name">100+ COMPONENTS</div>
+                                <p>The most complete set of UI Components featuring 100+ easy to use components for all your UI requirements.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-col-12 p-md-4">
+                        <div class="feature-card">
+                            <p:graphicImage name="images/home/jsf-opensource.png"  />
+                            <div class="feature-card-detail">
+                                <div class="feature-name">OPEN SOURCE</div>
+                                <p>Hosted at <a href="https://github.com/primefaces/primefaces" target="_blank">GitHub</a>, all components are open source and free to use under MIT license. Feel the power of open source.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-col-12 p-md-4">
+                        <div class="feature-card">
+                            <p:graphicImage name="images/home/jsf-themes.png"  />
+                            <div class="feature-card-detail">
+                                <div class="feature-name">THEMES</div>
+                                <p>Don’t get tied up in just one look and feel. Choose from a variety of options including material and flat design.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-col-12 p-md-4">
+                        <div class="feature-card">
+                            <p:graphicImage name="images/home/jsf-templates.png"  />
+                            <div class="feature-card-detail">
+                                <div class="feature-name">TEMPLATES</div>
+                                <p>Professionally designed highly customizable facelets based application templates to get you started in no time.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-col-12 p-md-4">
+                        <div class="feature-card">
+                            <p:graphicImage name="images/home/jsf-accesibility.png"  />
+                            <div class="feature-card-detail">
+                                <div class="feature-name">ACCESSIBILITY</div>
+                                <p>Fully accessible and in compliance with Section 508 standards.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-col-12 p-md-4">
+                        <div class="feature-card">
+                            <p:graphicImage name="images/home/jsf-pro.png"  />
+                            <div class="feature-card-detail">
+                                <div class="feature-name">PRO SUPPORT</div>
+                                <p>With the exclusive services of Pro account, you no longer need to post your questions in the community forum and your issues to community issue tracker.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-col-12 p-md-4">
+                        <div class="feature-card">
+                            <p:graphicImage name="images/home/jsf-productivity.png"  />
+                            <div class="feature-card-detail">
+                                <div class="feature-name">PRODUCTIVITY</div>
+                                <p>Allocate your valuable time to business logic rather than dealing with the complex user interface requirements.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-col-12 p-md-4">
+                        <div class="feature-card">
+                            <p:graphicImage name="images/home/jsf-community.png"  />
+                            <div class="feature-card-detail">
+                                <div class="feature-name">COMMUNITY</div>
+                                <p>Join PrimeFaces community to become a part of an active, vibrant and growing open source foundation.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-col-12 p-md-4">
+                        <div class="feature-card">
+                            <p:graphicImage name="images/home/jsf-mobile.png"  />
+                            <div class="feature-card-detail">
+                                <div class="feature-name">MOBILE</div>
+                                <p>Enhanced mobile user experience with touch optimized responsive design elements.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </ui:define>
+
+</ui:composition>

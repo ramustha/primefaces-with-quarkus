@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      lang="#{p:language()}" xml:lang="#{p:language()}">
+
+<h:head>
+    <f:facet name="first">
+        <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-93461466-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+
+            gtag('js', new Date());
+            gtag('config', 'UA-93461466-1');
+        </script>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0"/>
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+        <link href="#{resource['images/favicon-32x32.png']}" rel="icon" type="image/png" sizes="32x32"/>
+        <link href="#{resource['images/favicon-16x16.png']}" rel="icon" type="image/png" sizes="16x16"/>
+    </f:facet>
+    <title>PrimeFaces Showcase</title>
+
+    <h:outputStylesheet name="css/primeflex.css"/>
+
+    <h:outputScript name="jquery/jquery.js" library="primefaces"/>
+    <h:outputScript name="jquery/jquery-plugins.js" library="primefaces"/>
+
+    <ui:insert name="head"/>
+
+</h:head>
+
+<h:body>
+    <div class="layout-wrapper #{app.inputStyleClass}">
+        <ui:include src="./topbar.xhtml"></ui:include>
+        <ui:include src="./menu.xhtml"></ui:include>
+        <ui:include src="./config.xhtml"></ui:include>
+        <div class="layout-mask"></div>
+
+        <div class="layout-content">
+            <ui:insert name="content">
+            </ui:insert>
+            <ui:include src="./footer.xhtml"></ui:include>
+        </div>
+    </div>
+
+    <ui:insert name="status">
+        <p:ajaxStatus styleClass="status-indicator">
+            <f:facet name="start">
+                <i class="pi pi-spin pi-spinner" aria-hidden="true"></i>
+            </f:facet>
+
+            <f:facet name="complete">
+                <h:outputText value=""/>
+            </f:facet>
+        </p:ajaxStatus>
+    </ui:insert>
+
+    <ui:insert name="body"></ui:insert>
+
+    <h:outputStylesheet name="css/layout/layout.css"/>
+    <h:outputScript name="script/layout.js"/>
+    <h:outputScript name="script/prism.js"/>
+</h:body>
+
+</html>
