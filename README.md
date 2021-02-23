@@ -1,8 +1,8 @@
 # Primefaces with Quarkus project
 
-- quarkus 1.11.3.Final
-- myfaces 2.3-next-SNAPSHOT
-- primefaces 10.0.0-RC1
+- [Quarkus 1.11.3.Final](https://github.com/quarkusio/quarkus)
+- [Myfaces 2.3-next-M5](https://github.com/apache/myfaces/blob/master/extensions/quarkus/showcase/README.md)
+- [Primefaces 10.0.0-RC1](https://www.primefaces.org/showcase/)
 
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
 
