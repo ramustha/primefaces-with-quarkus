@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -jar target/quarkus-app/quarkus-run.jar
+web: java $JAVA_OPTS -jar target/primefaces-with-quarkus-1.0.0-SNAPSHOT-runner.jar
