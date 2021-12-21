@@ -5,6 +5,12 @@
                 template="/base/template.xhtml">
 
     <ui:define name="content">
+        <p:remoteCommand name="onLoad" actionListener="#{getStartedBacking.onLongRunning}" autoRun="true" update="main"/>
+        <h:form id="main">
+            <h2>#{getStartedBacking.data}</h2>
+        </h:form>
+
+
         <div class="content-section documentation">
             <h1>Getting Started</h1>
             <p>PrimeFaces is a lightweight library with one jar, zero-configuration and no required dependencies.
@@ -50,5 +56,10 @@
 </code></pre>
 
         </div>
+
     </ui:define>
+
+    <h:outputScript>
+
+    </h:outputScript>
 </ui:composition>

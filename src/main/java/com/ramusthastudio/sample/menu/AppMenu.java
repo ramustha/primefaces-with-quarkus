@@ -23,6 +23,8 @@
  */
 package com.ramusthastudio.sample.menu;
 
+import com.google.common.collect.Lists;
+
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.context.RequestScoped;
@@ -45,6 +47,10 @@ public class AppMenu {
         List<MenuItem> generalMenuItems = new ArrayList<>();
         generalMenuItems.add(new MenuItem("Get Started", "/getstarted"));
         generalMenuItems.add(new MenuItem("Setup", "/setup"));
+//        generalMenuItems.add(new MenuItem("Setup2", Lists.newArrayList(
+//                new MenuItem("Get Started 2", "/getstarted"),
+//                new MenuItem("Get Started 3", "/getstarted")
+//        )));
         menuCategories.add(new MenuCategory("General", generalMenuItems));
 
         for (MenuCategory category: menuCategories) {
